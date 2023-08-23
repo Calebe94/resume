@@ -1,0 +1,44 @@
+name: Build and Release Curriculum PDFs
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up TeXLive
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-extra
+
+      - name: Build PDFs
+        run: make all
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Release notes for ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload PDFs to Release
+        id: upload-assets
+        uses: actions/upload-artifact@v2
+        with:
+          name: curriculum-pdfs
+          path: |
+            curriculum.pdf
+            curriculum-pt.pdf
