@@ -13,7 +13,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up TeXLive
+      - name: Cache TeXLive dependencies
+        id: cache-texlive
+        uses: actions/cache@v2
+        with:
+          path: /usr/share/texlive
+          key: texlive-${{ runner.os }}-${{ hashFiles('**/*.tex') }}
+
+      - name: Install TeXLive dependencies
+        if: steps.cache-texlive.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-extra
@@ -36,9 +44,10 @@ jobs:
 
       - name: Upload PDFs to Release
         id: upload-assets
-        uses: actions/upload-artifact@v2
+        uses: softprops/action-gh-release@v1
         with:
-          name: curriculum-pdfs
-          path: |
+          files: |
             curriculum.pdf
             curriculum-pt.pdf
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release_id: ${{ steps.create_release.outputs.id }}
