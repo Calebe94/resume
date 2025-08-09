@@ -1,6 +1,7 @@
+
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-\moderncvstyle{casual}
+\moderncvstyle{classic}
 \moderncvcolor{blue}
 
 \usepackage[utf8]{inputenc}
@@ -9,8 +10,8 @@
 
 % personal data
 \name{Edimar Calebe}{Castanho}
-\title{Senior Python and Cloud Developer}
-\address{Brazil}{Curitiba, Paran\'a}
+\title{Senior Software Engineer \& Cloud Architect}
+\address{Curitiba, Brazil}{Open to relocation (Europe)}
 \email{contato@calebe.dev.br}
 \phone[mobile]{+55~(41)~99827~1302}
 \social[linkedin]{calebe94}
@@ -23,49 +24,65 @@
 
 \section{Summary}
 \cvitem{}{
-Experienced Senior Developer with a strong focus on Python programming and cloud computing. Proficient in AWS, GCP, and Magalu Cloud, with expertise in cloud automation, scalable microservices, and data engineering. Demonstrated ability to design and optimize high-performance solutions using modern frameworks, tools, and architectures.
+Senior Software Engineer with extensive experience in Python and cloud computing, specializing in scalable microservices and data pipelines.
+Skilled in AWS, GCP, OpenStack, Incus (LXD), with expertise in Infrastructure as Code (Terraform, Ansible) and DevOps practices (CI/CD with GitLab and Jenkins).
+Proven ability to lead the development of high-performance, cloud-native solutions using modern frameworks (FastAPI, Django) and containerization.
+Adept at collaborating with cross-functional teams to align technical strategies with business objectives.
+Fluent in English and Portuguese, open to opportunities in Europe and the US.
 }
 
 \section{Professional Experience}
-\cventry{2023 -- Present}{Senior Cloud Developer}{LuizaLabs - Magalu Cloud}{Curitiba - PR}{}{
+\cventry{2023 -- Present}{Senior Cloud Developer}{LuizaLabs (Magalu Cloud)}{Curitiba, Brazil}{}{
 \begin{itemize}
-\item Spearheaded the development of cloud automation tools within the IAAS tribe, streamlining infrastructure management on Magalu Cloud.
+\item Spearheaded the development of cloud automation tools within the IaaS team, streamlining infrastructure management on Magalu Cloud.
 \item Designed and implemented Python-based frameworks for scalable microservices using FastAPI and Django.
-\item Enhanced performance and reliability of cloud infrastructure leveraging Openstack, Juju, and Ansible.
-\item Worked extensively with AWS services, integrating them with internal tools to optimize data processing pipelines.
-\item Technologies: Python, FastAPI, Snowflake, RabbitMQ, Openstack, AWS, Docker, GitLab CI/CD.
+\item Enhanced cloud infrastructure performance and reliability using OpenStack, Juju, Terraform, and Ansible.
+\item Worked extensively with AWS services (Lambda, Glue, CDK) to optimize data processing pipelines and enable serverless integrations.
+\item Implemented GitOps workflows with ArgoCD to automate Kubernetes application deployments.
+\item Mentored junior engineers and collaborated with cross-functional teams to align technical solutions with business objectives.
+\item \textbf{Technologies:} Python, FastAPI, Django, Snowflake, RabbitMQ, OpenStack, AWS (Lambda, Glue, CDK), Docker, Kubernetes, GitLab CI/CD (Actions), Terraform, Ansible, ArgoCD
 \end{itemize}
 }
-
-\cventry{2020 -- 2023}{Cloud and Embedded Systems Analyst}{T2I Group}{Curitiba - PR}{}{
+\cventry{2020 -- 2023}{Embedded Systems Analyst}{T2I Group}{Curitiba, Brazil}{}{
 \begin{itemize}
-\item Transitioned legacy embedded systems to modern Python-based cloud-integrated solutions.
-\item Automated ETL workflows and optimized data pipelines using AWS Glue and Lambda.
-\item Implemented containerized applications for deployment in cloud environments using Docker and Kubernetes.
-\item Developed serverless architectures and integrated Python with various cloud services for end-to-end automation.
-\item Technologies: Python, AWS Glue, Lambda, Docker, Kubernetes, FreeRTOS, C++.
+\item Transitioned legacy embedded systems to modern Python-based, cloud-integrated solutions for improved scalability and maintainability.
+\item Developed containerized applications and Kubernetes deployments for multi-cloud environments.
+\item Established CI/CD pipelines with GitLab Actions and Jenkins, ensuring reliable continuous integration and delivery.
+\item Mentored team members in DevOps best practices and agile methodologies.
+\item \textbf{Technologies:} Python, AWS Glue, Lambda, Docker, Kubernetes, FreeRTOS, C++, GitLab CI/CD (Actions), Jenkins, Terraform, Ansible
 \end{itemize}
 }
-
-\cventry{2019 -- 2020}{Embedded Systems Intern}{Alta Rail Technology - ART}{Colombo - PR}{}{
+\cventry{2019 -- 2020}{Embedded Systems Intern}{Alta Rail Technology (ART)}{Colombo, Brazil}{}{
 \begin{itemize}
 \item Automated testing processes for embedded systems with Python, improving validation efficiency.
-\item Supported the integration of cloud solutions into existing workflows, leveraging AWS for scalability.
+\item Assisted in integrating cloud solutions with embedded workflows, leveraging AWS for scalability.
 \item Developed utilities for database interactions and hardware-software integration.
-\item Technologies: Python, SQLite, AWS, C++, Git.
+\item \textbf{Technologies:} Python, AWS, SQLite, C++, FreeRTOS, Git
+\end{itemize}
+}
+\cventry{2017}{Embedded Systems Intern}{T2I Group}{Curitiba, Brazil}{}{
+\begin{itemize}
+\item Designed and implemented an \textbf{OBD-II automotive fleet monitoring device} using PIC18F microcontrollers, proprietary vehicle interface chips, GSM/GPRS, and GPS/GNSS modules to collect and transmit real-time vehicle diagnostics and geolocation data to a REST API.
+\item Developed IoT solutions leveraging \textbf{Arduino, Bluetooth Low Energy (BLE) beacons}, and GPRS integration for museum exhibit tracking and interactive visitor experiences.
+\item Built an \textbf{aquarium automation system} on a Raspberry Pi 3-based SBC running Linux, integrating Arduino controllers to schedule lighting, regulate intensity, and automate environmental events via a web-based dashboard (Node.js + Vue.js).
+\item Programmed embedded firmware in \textbf{C/C++ (AVR, ATmega328, PIC18F)} and Python, integrating FreeRTOS for real-time control and peripheral management.
+\item Utilized modern development tools and workflows including Docker, Vagrant, Geany, GTK+, and Qt for cross-platform application development.
+\item Collaborated in a multidisciplinary engineering team, following structured development processes to deliver reliable embedded and IoT solutions for commercial applications.
 \end{itemize}
 }
 
 \section{Technical Skills}
-\cvitem{Programming}{Python, SQL, C++, Shell Script, Flask, Django, FastAPI}
-\cvitem{Cloud Platforms}{AWS (Glue, Lambda, CloudFormation, CDK), GCP, Openstack, Magalu Cloud, Docker}
-\cvitem{Databases}{Snowflake, PostgreSQL, MySQL, Elasticsearch, SQLite}
-\cvitem{DevOps}{CI/CD (GitLab, Jenkins), Docker, Ansible, Juju, Terraform}
-\cvitem{Expertise}{Cloud Automation, Data Engineering, Scalable Microservices, Event-Driven Systems, Serverless Architectures}
+\cvitem{Programming Languages}{Python, C++, SQL, Bash/Shell}
+\cvitem{Frameworks \& Libraries}{FastAPI, Django, Flask}
+\cvitem{Cloud Platforms}{AWS (Lambda, Glue, CDK), GCP, OpenStack}
+\cvitem{Databases \& Data}{Snowflake, PostgreSQL, MySQL, Elasticsearch, SQLite}
+\cvitem{DevOps \& Tools}{GitLab Actions, Jenkins, Docker, Kubernetes, Terraform, Ansible, ArgoCD}
+\cvitem{Other Tools}{Git, CI/CD Pipelines, Docker Compose}
+\cvitem{Expertise}{Infrastructure as Code, Cloud Automation, Scalable Microservices, Data Engineering, Agile \& Scrum}
 \cvitem{Languages}{Portuguese (Native), English (Fluent)}
 
 \section{Education}
-\cventry{2015 -- 2023}{Computer Engineering}{Universidade Positivo}{Curitiba}{}{}
-\cventry{2011 -- 2013}{Electromechanical Technical Course}{Instituto Federal do Paran\'a - IFPR}{Curitiba}{}{}
+\cventry{2015 -- 2023}{Computer Engineering}{Universidade Positivo}{Curitiba, Brazil}{}{}
+\cventry{2011 -- 2013}{Electromechanical Technical Course}{Instituto Federal do Paran\'a (IFPR)}{Curitiba, Brazil}{}{}
 
 \end{document}
