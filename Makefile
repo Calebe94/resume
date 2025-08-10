@@ -12,6 +12,9 @@ pt:
 en:
 	pdflatex curriculum.tex
 
-pdf: pt en
+full:
+	pdflatex curriculum-full.tex
+
+pdf: pt en full
 
 # end

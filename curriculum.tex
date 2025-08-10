@@ -1,16 +1,13 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
-
-\moderncvstyle{casual}
+\moderncvstyle{classic}
 \moderncvcolor{blue}
-
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.85]{geometry}
+\usepackage[scale=0.78]{geometry}
 \nopagenumbers
 
-% personal data
 \name{Edimar Calebe}{Castanho}
-\title{Senior Python and Cloud Developer}
-\address{Brazil}{Curitiba, Paran\'a}
+\title{Senior Cloud \& Embedded Systems Engineer}
+\address{Curitiba, Brazil}{Open to relocation (Europe \& US)}
 \email{contato@calebe.dev.br}
 \phone[mobile]{+55~(41)~99827~1302}
 \social[linkedin]{calebe94}
@@ -18,54 +15,65 @@
 \extrainfo{\faRss\href{https://blog.calebe.dev.br/}{blog.calebe.dev.br}}
 
 \begin{document}
-
 \maketitle
 
 \section{Summary}
 \cvitem{}{
-Experienced Senior Developer with a strong focus on Python programming and cloud computing. Proficient in AWS, GCP, and Magalu Cloud, with expertise in cloud automation, scalable microservices, and data engineering. Demonstrated ability to design and optimize high-performance solutions using modern frameworks, tools, and architectures.
+Senior Engineer bridging embedded systems and cloud architecture. 7+ years designing IoT-to-cloud solutions with infrastructure automation (OpenStack, AWS, Terraform). Proven in performance optimization (40\% deployment reduction), CI/CD pipelines, and cross-platform development. Targeting senior cloud/embedded roles in Europe/US. Fluent: English \& Portuguese.
 }
+
+\section{Technical Expertise}
+\cvitem{Cloud \& Virtualization}{\textbf{OpenStack} (Glance, Nova), \textbf{GCP} (Compute Engine/Cloud Storage/Cloud Functions), \textbf{AWS} (EC2/S3/Lambda), KVM/QEMU, Incus, Infrastructure as Code (IaC)}
+\cvitem{Automation \& DevOps}{\textbf{Terraform}, Ansible, \textbf{GitLab CI/CD}, GitHub Actions, ArgoCD, GitOps}
+\cvitem{Embedded \& IoT}{\textbf{ESP32}, FreeRTOS, TM4C, PIC, MQTT, SNMP, Linux (Debian/Yocto)}
+\cvitem{Languages}{Python, C/C++, SQL, Bash}
+\cvitem{Containers}{Docker, Kubernetes}
+\cvitem{Monitoring \& Testing}{Grafana, Kibana, OpenSearch, Sentry, Elasticsearch, pytest, sysbench, fio, iperf}
 
 \section{Professional Experience}
-\cventry{2023 -- Present}{Senior Cloud Developer}{LuizaLabs - Magalu Cloud}{Curitiba - PR}{}{
+\cventry{2023 -- Present}{Senior Cloud Engineer}{LuizaLabs (Magalu Cloud)}{}{}{
 \begin{itemize}
-\item Spearheaded the development of cloud automation tools within the IAAS tribe, streamlining infrastructure management on Magalu Cloud.
-\item Designed and implemented Python-based frameworks for scalable microservices using FastAPI and Django.
-\item Enhanced performance and reliability of cloud infrastructure leveraging Openstack, Juju, and Ansible.
-\item Worked extensively with AWS services, integrating them with internal tools to optimize data processing pipelines.
-\item Technologies: Python, FastAPI, Snowflake, RabbitMQ, Openstack, AWS, Docker, GitLab CI/CD.
+\item \textbf{OpenStack Automation}: Led VM provisioning workflows using OpenStack + Incus, improving platform reliability for 50K+ instances
+\item \textbf{Python Tooling}: Developed async tools (asyncio/Pydantic) for VM lifecycle management, reducing operational overhead 30\%
+\item \textbf{Image Optimization}: Created automated Ubuntu/Windows Server imaging with Ansible, cutting deployment time 40\% through QCOW2 compression
+\item \textbf{Performance Engineering}: Designed Terraform modules for benchmarking environments (sysbench/fio/iperf) to validate infrastructure scaling
 \end{itemize}
 }
 
-\cventry{2020 -- 2023}{Cloud and Embedded Systems Analyst}{T2I Group}{Curitiba - PR}{}{
+\cventry{2020 -- 2023}{Embedded Systems Analyst}{T2I Group}{}{}{
 \begin{itemize}
-\item Transitioned legacy embedded systems to modern Python-based cloud-integrated solutions.
-\item Automated ETL workflows and optimized data pipelines using AWS Glue and Lambda.
-\item Implemented containerized applications for deployment in cloud environments using Docker and Kubernetes.
-\item Developed serverless architectures and integrated Python with various cloud services for end-to-end automation.
-\item Technologies: Python, AWS Glue, Lambda, Docker, Kubernetes, FreeRTOS, C++.
+\item \textbf{IoT Architecture}: Designed vehicle detection system (MIP V2) processing 5k+ daily classifications using TM4C/ESP32 modules
+\item \textbf{Telemetry Systems}: Implemented SNMP protocol on ESP32 via custom LwIP fork for highway weather stations
+\item \textbf{Data Pipeline}: Built Flask/MQTT server aggregating real-time sensor data from 200+ roadside units
+\item \textbf{CI/CD Migration}: Consolidated 50+ repos to GitLab/GitHub Actions, reducing build times 30\%
 \end{itemize}
 }
 
-\cventry{2019 -- 2020}{Embedded Systems Intern}{Alta Rail Technology - ART}{Colombo - PR}{}{
+\section{Professional Experience (Continued)}
+\cventry{2019 -- 2020}{Embedded Systems Intern}{Alta Rail Technology}{}{}{
 \begin{itemize}
-\item Automated testing processes for embedded systems with Python, improving validation efficiency.
-\item Supported the integration of cloud solutions into existing workflows, leveraging AWS for scalability.
-\item Developed utilities for database interactions and hardware-software integration.
-\item Technologies: Python, SQLite, AWS, C++, Git.
+\item Developed real-time train monitoring dashboard (Python/Flask) for locomotive operators
+\item Optimized C\# communication library, reducing satellite transmission costs 25\% via OSI header minimization
 \end{itemize}
 }
 
-\section{Technical Skills}
-\cvitem{Programming}{Python, SQL, C++, Shell Script, Flask, Django, FastAPI}
-\cvitem{Cloud Platforms}{AWS (Glue, Lambda, CloudFormation, CDK), GCP, Openstack, Magalu Cloud, Docker}
-\cvitem{Databases}{Snowflake, PostgreSQL, MySQL, Elasticsearch, SQLite}
-\cvitem{DevOps}{CI/CD (GitLab, Jenkins), Docker, Ansible, Juju, Terraform}
-\cvitem{Expertise}{Cloud Automation, Data Engineering, Scalable Microservices, Event-Driven Systems, Serverless Architectures}
-\cvitem{Languages}{Portuguese (Native), English (Fluent)}
+\cventry{2017}{Embedded Systems Intern}{T2I Group}{}{}{
+\begin{itemize}
+\item Built OBD-II fleet tracking device using PIC18F + GSM/GPRS modules
+\item Created Raspberry Pi aquarium automation system with Vue.js dashboard
+\end{itemize}
+}
+
+\section{Technical Proficiencies}
+\cvitem{Web/APIs}{FastAPI, Flask, Django, REST, Node.js, Vue.js}
+\cvitem{Cloud Tools}{AWS (Glue, CDK), GCP, Juju, Cloudbase-init}
+\cvitem{Embedded Platforms}{Arduino, ATmega328, FreeRTOS, VectorCast}
+\cvitem{Data Systems}{PostgreSQL, MySQL, SQLite, Snowflake, Elasticsearch}
+\cvitem{Networking}{GSM/GPRS, GPS/GNSS, BLE, OSI-layer optimization}
+\cvitem{Methodologies}{DevOps, Agile/Scrum, Microservices}
 
 \section{Education}
-\cventry{2015 -- 2023}{Computer Engineering}{Universidade Positivo}{Curitiba}{}{}
-\cventry{2011 -- 2013}{Electromechanical Technical Course}{Instituto Federal do Paran\'a - IFPR}{Curitiba}{}{}
+\cventry{2015--2023}{B.Eng Computer Engineering}{Universidade Positivo}{}{}{}
+\cventry{2011--2013}{Electromechanical Tech}{Instituto Federal do Paraná}{}{}{}
 
 \end{document}
